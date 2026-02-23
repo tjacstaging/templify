@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Acme Corp", "industry": "Manufacturing" },
+  { "id": 2, "name": "Bright Solutions", "industry": "Technology" },
+  { "id": 3, "name": "Green Horizons", "industry": "Energy" }
+]
