@@ -24,7 +24,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar isAuthenticated={isAuthenticated} />
+      <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />

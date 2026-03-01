@@ -1,17 +1,24 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface NavbarProps {
   isAuthenticated: boolean;
+  setIsAuthenticated: (value: boolean) => void;
 }
 
-function Navbar({ isAuthenticated }: NavbarProps) {
+function Navbar({ isAuthenticated, setIsAuthenticated }: NavbarProps) {
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    setIsAuthenticated(false);
+    navigate('/login');
+  }
+
   if (!isAuthenticated) return null;
   return (
     <nav>
       <Link to="/home">Home</Link>
       <Link to="/customer">Customer</Link>
-      <Link to="/login">Login</Link>
-      <Link to="/signup">Signup</Link>
+      <button onClick={handleLogout}>Logout</button>
     </nav>
   );
 }
