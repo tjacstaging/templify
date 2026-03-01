@@ -1,0 +1,18 @@
+# Node.js dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# TypeScript build info files
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Public folder (if dynamically generated)
+public/
