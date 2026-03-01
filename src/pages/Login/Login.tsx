@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import users from '../../mockdata/users.json';
 import './Login.css';
+import { User, Lock, Diamond, Key } from 'lucide-react';
 
 interface LoginProps {
   setIsAuthenticated: (value: boolean) => void;
@@ -27,7 +28,9 @@ function Login({ setIsAuthenticated }: LoginProps) {
   return (
     <div className="login-page">
       <nav className="login-nav">
-        <a href="#" className="login-logo">Key</a>
+        <a href="#" className="login-logo">
+          <Key color="white" size={24} style={{ marginRight: '8px' }} /> Key
+        </a>
         <div className="login-nav-links">
           <a href="#" className="active">Login</a>
           <a href="#">About Us</a>
@@ -37,11 +40,13 @@ function Login({ setIsAuthenticated }: LoginProps) {
       </nav>
       <div className="login-content">
         <div className="login-icon">
-          <span>&#9671;</span>
+          <Diamond color="white" size={48} />
         </div>
         <form onSubmit={handleSubmit} className="login-form">
           <div className="login-field">
-            <span className="login-field-icon">&#128100;</span>
+            <span className="login-field-icon">
+              <User color="white" size={24} />
+            </span>
             <input
               type="email"
               placeholder="Username"
@@ -51,7 +56,9 @@ function Login({ setIsAuthenticated }: LoginProps) {
             />
           </div>
           <div className="login-field">
-            <span className="login-field-icon">&#128274;</span>
+            <span className="login-field-icon">
+              <Lock color="white" size={24} />
+            </span>
             <input
               type="password"
               placeholder="Password"
