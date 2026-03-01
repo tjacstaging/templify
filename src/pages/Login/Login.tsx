@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import users from '../../mockdata/users.json';
+import './Login.css';
 
 interface LoginProps {
   setIsAuthenticated: (value: boolean) => void;
@@ -24,14 +25,64 @@ function Login({ setIsAuthenticated }: LoginProps) {
   }
 
   return (
-    <div>
-      <p>Login Page</p>
-      <form onSubmit={handleSubmit}>
-        <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-        <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-        <button type="submit">Login</button>
-      </form>
-      {error && <p>{error}</p>}
+    <div className="login-page">
+      <nav className="login-nav">
+        <a href="#" className="login-logo">Key</a>
+        <div className="login-nav-links">
+          <a href="#" className="active">Login</a>
+          <a href="#">About Us</a>
+          <a href="#">Register</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+      <div className="login-content">
+        <div className="login-icon">
+          <span>&#9671;</span>
+        </div>
+        <form onSubmit={handleSubmit} className="login-form">
+          <div className="login-field">
+            <span className="login-field-icon">&#128100;</span>
+            <input
+              type="email"
+              placeholder="Username"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              className="login-input"
+            />
+          </div>
+          <div className="login-field">
+            <span className="login-field-icon">&#128274;</span>
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              className="login-input"
+            />
+          </div>
+          {error && <p className="login-error">{error}</p>}
+          <button type="submit" className="login-button">GET STARTED</button>
+          <div className="login-options">
+            <label className="login-remember">
+              <input type="checkbox" />
+              <span>Keep Logged In</span>
+            </label>
+            <a href="#">Forgot Password?</a>
+          </div>
+          <div className="login-links">
+            <a href="#">CREATE ACCOUNT</a>
+            <a href="#">NEED HELP?</a>
+          </div>
+        </form>
+      </div>
+      <footer className="login-footer">
+        <div className="login-footer-links">
+          <a href="#">About Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms Of Use</a>
+        </div>
+        <p className="login-copyright">&copy; 2026 Key. All Rights Reserved</p>
+      </footer>
     </div>
   );
 }
