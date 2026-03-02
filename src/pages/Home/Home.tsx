@@ -1,6 +1,8 @@
+import '../page.css';
+
 function Home() {
   return (
-    <div>
+    <div className="page-container">
       <p>Home Page</p>
     </div>
   );
