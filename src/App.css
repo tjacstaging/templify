@@ -10,3 +10,78 @@
 body {
     font-family: "Inter Variable", sans-serif;
 }
+
+#root {
+    min-height: 100vh;
+}
+
+.app-layout {
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+.app-main {
+    min-height: 100vh;
+    transition: margin-left 0.28s ease;
+}
+
+.with-navbar.sidebar-expanded .app-main {
+    margin-left: 280px;
+}
+
+.with-navbar.sidebar-icons .app-main {
+    margin-left: 88px;
+}
+
+.with-navbar.sidebar-hidden .app-main,
+.no-navbar .app-main {
+    margin-left: 0;
+}
+
+.sidebar-reopen-button {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    background-color: color-mix(in srgb, var(--card-background) 85%, transparent);
+    color: var(--text-primary-color);
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+}
+
+@media (max-width: 1200px) {
+    .with-navbar.sidebar-expanded .app-main {
+        margin-left: 256px;
+    }
+}
+
+@media (max-width: 992px) {
+    .with-navbar.sidebar-expanded .app-main {
+        margin-left: 232px;
+    }
+
+    .with-navbar.sidebar-icons .app-main {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .with-navbar .app-main,
+    .no-navbar .app-main {
+        margin-left: 0;
+    }
+
+    .sidebar-reopen-button {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .app-main {
+        min-height: 100vh;
+    }
+}

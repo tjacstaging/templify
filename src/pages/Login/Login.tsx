@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import users from '../../mockdata/users.json';
 import './Login.css';
 import { User, Lock, Diamond, Key } from 'lucide-react';
-import { FaGoogle, FaWindows, FaChrome } from "react-icons/fa";
+import { FaGoogle, FaWindows } from "react-icons/fa";
 
 interface LoginProps {
   setIsAuthenticated: (value: boolean) => void;
