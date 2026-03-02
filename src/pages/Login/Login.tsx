@@ -66,7 +66,6 @@ function Login({ setIsAuthenticated }: LoginProps) {
             />
           </div>
           {error && <p className="login-error">{error}</p>}
-          <button type="submit" className="login-button">GET STARTED</button>
           <div className="login-options">
             <label className="login-remember">
               <input type="checkbox" />
@@ -74,6 +73,7 @@ function Login({ setIsAuthenticated }: LoginProps) {
             </label>
             <a href="#">Forgot Password?</a>
           </div>
+          <button type="submit" className="login-button">Sign In</button>
           <div className="login-links">
             <a href="#">CREATE ACCOUNT</a>
             <a href="#">NEED HELP?</a>

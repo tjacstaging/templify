@@ -85,6 +85,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    position: relative;
 }
 
 .login-field {
@@ -125,6 +126,8 @@
     font-size: 13px;
     margin: 0;
     text-align: center;
+    position: absolute;
+    top: -21px;
 }
 
 .login-button {
@@ -342,8 +345,8 @@
     }
 
     .login-options {
-        flex-direction: column;
-        gap: 12px;
+        /* flex-direction: column;
+        gap: 12px; */
     }
 
     .login-links {
