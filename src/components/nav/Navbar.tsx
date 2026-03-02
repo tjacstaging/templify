@@ -77,11 +77,11 @@ function Navbar({
             aria-label={isMobile ? 'Close navigation' : 'Toggle navigation mode'}
           >
             {isMobile ? (
-              <X size={18} />
+              <X size={16} />
             ) : navMode === 'expanded' ? (
-              <PanelLeftClose size={18} />
+              <PanelLeftClose size={16} />
             ) : (
-              <PanelLeftOpen size={18} />
+              <PanelLeftOpen size={16} />
             )}
           </button>
           {isLabelVisible && <span className="sidebar-brand">Templify</span>}
@@ -93,7 +93,7 @@ function Navbar({
             className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}
             onClick={handleNavSelect}
           >
-            <Home size={18} />
+            <Home size={16} />
             {isLabelVisible && <span>Home</span>}
           </NavLink>
           <NavLink
@@ -101,13 +101,13 @@ function Navbar({
             className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}
             onClick={handleNavSelect}
           >
-            <Users size={18} />
+            <Users size={16} />
             {isLabelVisible && <span>Customer</span>}
           </NavLink>
         </div>
 
         <button type="button" className="sidebar-link sidebar-logout" onClick={handleLogout}>
-          <LogOut size={18} />
+          <LogOut size={16} />
           {isLabelVisible && <span>Logout</span>}
         </button>
       </nav>
