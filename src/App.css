@@ -10,3 +10,85 @@
 body {
     font-family: "Inter Variable", sans-serif;
 }
+
+#root {
+    min-height: 100vh;
+}
+
+.app-layout {
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+.app-main {
+    min-height: 100vh;
+    transition: margin-left 0.28s ease;
+}
+
+.with-navbar.sidebar-expanded .app-main {
+    margin-left: 240px;
+}
+
+.with-navbar.sidebar-icons .app-main {
+    margin-left: 60px;
+}
+
+.with-navbar.sidebar-hidden .app-main,
+.no-navbar .app-main {
+    margin-left: 0;
+}
+
+.sidebar-reopen-button {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid color-mix(in srgb, var(--border-color) 25%, transparent);
+    border-radius: 0.5rem;
+    background-color: var(--background-color);
+    color: var(--text-secondary-color);
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-reopen-button:hover {
+    background-color: color-mix(in srgb, var(--card-background) 30%, transparent);
+    color: var(--text-primary-color);
+}
+
+@media (max-width: 1200px) {
+    .with-navbar.sidebar-expanded .app-main {
+        margin-left: 230px;
+    }
+}
+
+@media (max-width: 992px) {
+    .with-navbar.sidebar-expanded .app-main {
+        margin-left: 220px;
+    }
+
+    .with-navbar.sidebar-icons .app-main {
+        margin-left: 56px;
+    }
+}
+
+@media (max-width: 768px) {
+    .with-navbar .app-main,
+    .no-navbar .app-main {
+        margin-left: 0;
+    }
+
+    .sidebar-reopen-button {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .app-main {
+        min-height: 100vh;
+    }
+}

@@ -1,4 +1,10 @@
 body {
     background-color: var(--background-color);
     color: var(--text-primary-color);
+    overflow: hidden;
+}
+
+.page-container {
+    margin: 9px 17px 0 17px;
+    height: 100vh;
 }

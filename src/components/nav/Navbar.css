@@ -1,0 +1,203 @@
+.app-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--background-color);
+    border-right: 1px solid color-mix(in srgb, var(--border-color) 35%, transparent);
+    color: var(--text-primary-color);
+    transition: width 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+    z-index: 1000;
+}
+
+.app-sidebar.mode-icons {
+    width: 60px;
+}
+
+.app-sidebar.mode-hidden {
+    width: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    pointer-events: none;
+    padding: 0;
+    border-right: none;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.3rem;
+    min-height: 2rem;
+}
+
+.sidebar-brand {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary-color);
+    white-space: nowrap;
+}
+
+.sidebar-toggle {
+    width: 1.75rem;
+    height: 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 0.38rem;
+    background-color: transparent;
+    color: var(--text-secondary-color);
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-toggle:hover {
+    background-color: color-mix(in srgb, var(--card-background) 28%, transparent);
+    color: var(--text-primary-color);
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.12rem;
+    flex: 1;
+    margin-top: 0.35rem;
+}
+
+.sidebar-link {
+    width: 100%;
+    min-height: 1.95rem;
+    border: none;
+    border-radius: 0.38rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.52rem;
+    padding: 0.4rem 0.5rem;
+    text-decoration: none;
+    color: var(--text-secondary-color);
+    background-color: transparent;
+    transition: background-color 0.15s ease, color 0.15s ease;
+    cursor: pointer;
+    font-size: 0.76rem;
+    font-weight: 300;
+}
+
+.mode-icons .sidebar-link {
+    justify-content: center;
+    padding: 0.4rem;
+}
+
+.sidebar-link span {
+    white-space: nowrap;
+}
+
+.sidebar-link:hover {
+    background-color: color-mix(in srgb, var(--card-background) 24%, transparent);
+    color: var(--text-primary-color);
+}
+
+.sidebar-link.active {
+    background-color: color-mix(in srgb, var(--card-background) 32%, transparent);
+    color: var(--text-primary-color);
+}
+
+.sidebar-logout {
+    margin-top: auto;
+    margin-bottom: 0.25rem;
+    font: inherit;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .app-sidebar {
+        width: 230px;
+    }
+}
+
+@media (max-width: 992px) {
+    .app-sidebar {
+        width: 220px;
+    }
+
+    .app-sidebar.mode-icons {
+        width: 56px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-nav-toggle {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid color-mix(in srgb, var(--border-color) 25%, transparent);
+        background-color: var(--background-color);
+        color: var(--text-secondary-color);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+        cursor: pointer;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .mobile-nav-toggle:hover {
+        background-color: color-mix(in srgb, var(--card-background) 30%, transparent);
+        color: var(--text-primary-color);
+    }
+
+    .app-sidebar.is-mobile {
+        width: 100vw;
+        height: 100vh;
+        border-right: none;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        padding: 0.5rem;
+    }
+
+    .app-sidebar.is-mobile.mobile-open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .app-sidebar.is-mobile .sidebar-header {
+        justify-content: space-between;
+    }
+
+    .app-sidebar.is-mobile .sidebar-links {
+        margin-top: 0.4rem;
+    }
+
+    .app-sidebar.is-mobile .sidebar-link {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0.55rem 0.65rem;
+        min-height: 2.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .app-sidebar {
+        padding: 0.45rem;
+    }
+
+    .sidebar-link {
+        min-height: 2rem;
+    }
+}
