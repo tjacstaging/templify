@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import users from '../../mockdata/users.json';
 import './Login.css';
 import { User, Lock, Diamond, Key } from 'lucide-react';
+import { FaGoogle, FaWindows, FaChrome } from "react-icons/fa";
 
 interface LoginProps {
   setIsAuthenticated: (value: boolean) => void;
@@ -74,10 +75,15 @@ function Login({ setIsAuthenticated }: LoginProps) {
             <a href="#">Forgot Password?</a>
           </div>
           <button type="submit" className="login-button">Sign In</button>
-          <div className="login-links">
+          <span className='other-login-label'>Or sign in with</span>
+          <div className='other-login'>
+            <a href="#" className="other-login-google"><FaGoogle /> Google</a>
+            <a href="#" className="other-login-ms"><FaWindows /> Windows</a>
+          </div>
+          {/* <div className="login-links">
             <a href="#">CREATE ACCOUNT</a>
             <a href="#">NEED HELP?</a>
-          </div>
+          </div> */}
         </form>
       </div>
       <footer className="login-footer">
