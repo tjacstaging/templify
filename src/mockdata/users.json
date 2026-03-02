@@ -1,5 +1,26 @@
 [
-  { "id": 1, "name": "Alice Johnson", "email": "alice@example.com", "password": "password123" },
-  { "id": 2, "name": "Bob Smith", "email": "bob@example.com", "password": "password456" },
-  { "id": 3, "name": "Carol White", "email": "carol@example.com", "password": "password789" }
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "email": "alice@example.com",
+    "password": "password123"
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "email": "bob@example.com",
+    "password": "password456"
+  },
+  {
+    "id": 3,
+    "name": "Carol White",
+    "email": "carol@example.com",
+    "password": "password789"
+  },
+  {
+    "id": 4,
+    "name": "Joel Fischer",
+    "email": "joel@Insynk.ai",
+    "password": "Jfisch8874*"
+  }
 ]

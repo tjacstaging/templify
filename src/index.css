@@ -1,5 +1,5 @@
 :root {
-    --flat-text: #ffffff;
+    --flat-text: #000000;
     --primary-color: #2d3436;
     --secondary-color: #00cec9;
     --background-color: #dfe6e9;
@@ -14,7 +14,7 @@
 }
 
 [data-theme="dark"] {
-    --flat-text: #000000;
+    --flat-text: #ffffff;
     --primary-color: #dfe6e9;
     --secondary-color: #00cec9;
     --background-color: #2d3436;

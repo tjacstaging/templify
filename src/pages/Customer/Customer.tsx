@@ -1,6 +1,8 @@
+import '../page.css';
+
 function Customer() {
   return (
-    <div>
+    <div className="page-container">
       <p>Customer Page</p>
     </div>
   );
