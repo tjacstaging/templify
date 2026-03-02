@@ -28,9 +28,7 @@ function Login({ setIsAuthenticated }: LoginProps) {
   return (
     <div className="login-page">
       <nav className="login-nav">
-        <a href="#" className="login-logo">
-          <Key color="white" size={24} style={{ marginRight: '8px' }} /> Key
-        </a>
+        <a href="#" className="login-logo"><Key color="white" size={24} style={{ marginRight: '8px' }} />Templify</a>
         <div className="login-nav-links">
           <a href="#" className="active">Login</a>
           <a href="#">About Us</a>
