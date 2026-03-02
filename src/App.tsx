@@ -5,6 +5,7 @@ import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import Home from './pages/Home/Home';
 import Customer from './pages/Customer/Customer';
+import './index.css'
 import './App.css';
 
 interface ProtectedRouteProps {
